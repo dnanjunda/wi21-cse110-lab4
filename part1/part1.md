@@ -1,0 +1,37 @@
+1. The value of i will be logged to the console, which is prices.length, because the for loop runs until i = prices.length. Since i was created as a var inside the for loop, and var has no block scope, i can still be accessed outside of the for loop.
+2. The value of discountedPrice that was set in the for loop when i = (prices.length) - 1 will be logged to the console. This is because discountedPrice was created as a var and var has no block scope, so it can still be accessed outside of the for loop.
+3. The value of finalPrice that was last set in the for loop will be logged to the console. This is because finalPrice was created as a var inside the function discountPrices(), and var has function-scope, so it can be accessed inside the function.
+4. The function will return [50,100,150]. This is because the function takes in an array of prices and a discount value, which is 0.5. This means each price in the array will be halved one at a time inside the for loop and the new price is stored in the variable discounted. Since discounted was created as a var and var has function-scope, discounted can be accessed inside the function and returned.
+5. This line will result in a ReferenceError. This is because the variable i was created inside the for loop block using let, and let has block scope, so it is only accessible inside that block. This will cause an error to be thrown when you try to access i outside of the for loop.
+6. This line will result in a ReferenceError. This is because the variable discountedPrice was created inside the for loop block using let, and let has block scope, so it is only accessible inside that block. This results in an error when you try to access discountedPrice outside of the for loop.
+7. The value of finalPrice that was last set in the for loop will be logged to the console. This is because finalPrice was created using let inside the function discountPrices(), and let has function-scope, so it can be accessed inside the function.
+8. The function will return [50,100,150]. This is because the function takes in an array of prices and a discount value, which is 0.5. This means each price in the array will be halved one at a time inside the for loop and the new price is stored in the variable discounted. Since discounted was created using let and let has function-scope, discounted can be accessed inside the function and returned.
+9. This line will result in a ReferenceError. This is because the variable i was created inside the for loop block using let, and let has block scope, so the variable is only accessible inside that block. This will cause an error to be thrown when you try to access i outside of the for loop block.
+10. This line will result in a ReferenceError. This is because the variable discountedPrice was created inside the for loop block as a const, and const has block scope, so it is only accessible inside that block. This results in an error when you try to access discountedPrice outside of the for loop.
+11. The value of finalPrice will be logged to the console, which is 0. This is because finalPrice was created inside the function discountPrices() as a const. Since it is a const and was initialized to 0, its value can never be changed inside the for loop, which will result in an error. Since const has function-scope, finalPrice can be accessed inside the function and returned.
+12. The function will return the empty array []. This is because discounted was created inside the function discountPrices() as a const. Since it is a const and initialized to the empty array [], its value can never be changed, which the for loop attempts to do. This will cause an error, but since those lines are ignored, the value of discounted remains as []. Since const has function-scope, discounted can be accessed inside the function and returned.
+13. A. student.name
+    B. student[‘Grad Year’]
+    C. student.greeting()
+    D. student[‘Favorite Teacher’].name
+    E. student.courseLoad[0]
+14. A. Output: '32'. This is because '3' is a string, so string concatenation will be performed by the  plus sign by converting 2 to a string. So, '3' + '2' = '32'.
+    B. Output: 1. This is because the minus sign results in a subtraction operation, which converts '3' to a string. So, 3 - 2 = 1.
+    C. Output: 3. This is because 3 is a number, and the numeric value of null is 0, so the add operation results in 3 + 0 = 3.
+    D. Output: '3null'. This is because '3' is a string, so string concatenation will be performed by the  plus sign by converting null to a string. So, '3' + 'null' = '3null'.
+    E. Output: 4. This is because true is a boolean and 3 is a number, so the numeric value of true will be used to add the values. So, 1 + 3 = 4.
+    F. Output: 0. This is because false and null will be converted to their numeric values, which are 0 and 0 respectively, when performing an add operation. So, 0 + 0 = 0.
+    G. Output: '3undefined'. This is because "3" is a string, so string concatenation will be performed by the plus sign by converting undefined to a string. So, '3' + 'undefined' = '3undefined'.
+    H. Output: NaN. This is because the minus operation can only do subtraction, but undefined doesn't have a numeric value. So, subtraction can't be performed.
+15. A. Output: true. This is because when comparing a string and a number, the string is converted to a number. So, 2 > 1 is true.
+    B. Output: false. This is because when comparing two strings, lexographical order is used. So, 2 is compared to 1, and 2 > 1 is false.
+    C. Output: true. This is because when comparing a string and a number, the string is converted to a number. So, 2 = 2 is true.
+    D. Output: false. This is because the === sign does a stict comparison without type conversion. Since '2' is a string and 2 is a number, this is false.
+    E. Output: false. This is because true is converted to its numeric value, which is 1. Since 1 is not equal to 2, this is false.
+    F. Output: true. This is because the Boolean() function converts any nonzero number to true. So, Boolean(2) is true, and true = true.
+16. The == operator checks equality between two values by doing type conversion if the values are of different types. The === operator does a strict equality check without type conversion.
+17. The string ‘How are you?’ gets printed. This is because the numeric value of true is 1, so the first if statement 2==true returns false. But, in the else if statement, since 2 is nonzero, it has a boolean value of true and if(2) returns true. So, the else if case will be entered and ‘How are you?’ gets printed.
+18. Answer is in the file part1-question18.js
+19. The array [6,8,10] is returned by that function call. This is because for each value in the input array [1,2,3], the value returned by a call to the callback function, which is doSomething, is added to newArr. The callback function doSomething has 2 parameters, which are num and callback. So, in the call to doSomething one value in array is passed along with a function that multiplies its input parameter x by 2. So, doSomething adds 2 to its input parameter num and then calls the callback function that was passed in. So, essentially each call to doSomething adds 2 to array[i] and then multiples that by 2. So, the function modifyArray does the operation (i+2)*2 for each value i in array.
+20. Answer is in the file part1-question20.js
+21. Output: 1 4 3 2 (on separate lines). 
